@@ -12,7 +12,7 @@
 
 FNstone=function(url){
   url=xml2::read_html(url)
-  stone=(rvest::html_text(rvest::html_node(x=url,css="#main > div > div > div > article > div:nth-child(49) > div > p:nth-child(1) > a:nth-child(3)")))
+  stone=(rvest::html_text(rvest::html_node(x=url,css="#main > div > div > div > article > div:nth-child(52) > div > p:nth-child(1) > a:nth-child(3)")))
   stone=data.frame("Brithstone"=stone)
   stone}
 

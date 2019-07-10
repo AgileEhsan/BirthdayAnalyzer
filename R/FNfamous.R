@@ -12,9 +12,9 @@
 
 FNfamous=function(url){
   url=xml2::read_html(url)
-  famous1=(rvest::html_text(rvest::html_node(x=url,css="#main > div > div > div > article > div:nth-child(42) > div > ul > li:nth-child(1)")))
-  famous2=rvest::html_text(rvest::html_node(x=url,css = "#main > div > div > div > article > div:nth-child(42) > div > ul > li:nth-child(2)"))
-  famous3=rvest::html_text(rvest::html_node(x=url,css = "#main > div > div > div > article > div:nth-child(42) > div > ul > li:nth-child(3)"))
+  famous1=(rvest::html_text(rvest::html_node(x=url,css="#main > div > div > div > article > div:nth-child(45) > div > ul > li:nth-child(1)")))
+  famous2=rvest::html_text(rvest::html_node(x=url,css = "#main > div > div > div > article > div:nth-child(45) > div > ul > li:nth-child(2)"))
+  famous3=rvest::html_text(rvest::html_node(x=url,css = "#main > div > div > div > article > div:nth-child(45) > div > ul > li:nth-child(3)"))
   famous=data.frame("Famous1"=famous1,"Famous2"=famous2,"Famous3"=famous3)
   famous
 }

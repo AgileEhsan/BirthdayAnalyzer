@@ -32,42 +32,42 @@ datelist=as.data.frame(c(seq(as.Date(begin), as.Date(end), by=frequency)))
   
   FNelement=function(url){
     url=xml2::read_html(url)
-    element=(rvest::html_text(rvest::html_node(x=url,css="#main > div > div > div > article > div:nth-child(6) > div > ul > li:nth-child(5) > a")))
+    element=(rvest::html_text(rvest::html_node(x=url,css="#main > div > div > div > article > div:nth-child(7) > div > ul > li:nth-child(5) > a")))
     element=substr(element,5,nchar(element))
     element=data.frame("Element"=element)}
   
   FNstone=function(url){
     url=xml2::read_html(url)
-    stone=(rvest::html_text(rvest::html_node(x=url,css="#main > div > div > div > article > div:nth-child(49) > div > p:nth-child(1) > a:nth-child(3)")))
+    stone=(rvest::html_text(rvest::html_node(x=url,css="#main > div > div > div > article > div:nth-child(52) > div > p:nth-child(1) > a:nth-child(3)")))
     stone=data.frame("Brithstone"=stone)}
   
   FNstarsign=function(url){
     url=xml2::read_html(url)
-    stone=(rvest::html_text(rvest::html_node(x=url,css="#main > div > div > div > article > div:nth-child(49) > div > p:nth-child(1) > a:nth-child(3)")))
+    stone=(rvest::html_text(rvest::html_node(x=url,css="#main > div > div > div > article > div:nth-child(52) > div > p:nth-child(1) > a:nth-child(3)")))
     starsign=ifelse(stone=="Garnet","Capricorn",ifelse(stone=="Amethyst","Aquarians",ifelse(stone=="Aquamarine","Pisces",ifelse(stone=="Diamond","Aries",ifelse(stone=="Emerald","Taurus",ifelse(stone=="Agate","Gemini",ifelse(stone=="Pearl","Cancer",ifelse(stone=="Ruby","Leo",ifelse(stone=="Sapphire","Virgo",ifelse(stone=="Opal","Libra",ifelse(stone=="Topaz","Scorpio",ifelse(stone=="Turquoise","Sagittarius"))))))))))))
     starsign=data.frame("Starsign"=starsign)}
   
   FNfriend=function(url){
     url=xml2::read_html(url)
-    friend1=(rvest::html_text(rvest::html_node(x=url,css="#main > div > div > div > article > div:nth-child(6) > div > ul > ul.bullet-green > li:nth-child(1) > a")))
-    friend2=rvest::html_text(rvest::html_node(x=url,css = "#main > div > div > div > article > div:nth-child(6) > div > ul > ul.bullet-green > li:nth-child(2) > a"))
-    friend3=rvest::html_text(rvest::html_node(x=url,css = "#main > div > div > div > article > div:nth-child(6) > div > ul > ul.bullet-green > li:nth-child(3) > a"))
+    friend1=(rvest::html_text(rvest::html_node(x=url,css="#main > div > div > div > article > div:nth-child(7) > div > ul > ul.bullet-green > li:nth-child(1) > a")))
+    friend2=rvest::html_text(rvest::html_node(x=url,css = "#main > div > div > div > article > div:nth-child(7) > div > ul > ul.bullet-green > li:nth-child(2) > a"))
+    friend3=rvest::html_text(rvest::html_node(x=url,css = "#main > div > div > div > article > div:nth-child(7) > div > ul > ul.bullet-green > li:nth-child(3) > a"))
     friend=data.frame("Friend1"=friend1,"Friend2"=friend2,"Friend3"=friend3)
   }
   
 
   FNfoes=function(url){
     url=xml2::read_html(url)
-    foe1=(rvest::html_text(rvest::html_node(x=url,css="#main > div > div > div > article > div:nth-child(6) > div > ul > ul.bullet-red > li:nth-child(1) > a")))
-    foe2=rvest::html_text(rvest::html_node(x=url,css = "#main > div > div > div > article > div:nth-child(6) > div > ul > ul.bullet-red > li:nth-child(2) > a"))
+    foe1=(rvest::html_text(rvest::html_node(x=url,css="#main > div > div > div > article > div:nth-child(7) > div > ul > ul.bullet-red > li:nth-child(1) > a")))
+    foe2=rvest::html_text(rvest::html_node(x=url,css = "#main > div > div > div > article > div:nth-child(7) > div > ul > ul.bullet-red > li:nth-child(2) > a"))
     foe=data.frame("Foe1"=foe1,"Foe2"=foe2)
   }
   
   FNfamous=function(url){
     url=xml2::read_html(url)
-    famous1=(rvest::html_text(rvest::html_node(x=url,css="#main > div > div > div > article > div:nth-child(42) > div > ul > li:nth-child(1)")))
-    famous2=rvest::html_text(rvest::html_node(x=url,css = "#main > div > div > div > article > div:nth-child(42) > div > ul > li:nth-child(2)"))
-    famous3=rvest::html_text(rvest::html_node(x=url,css = "#main > div > div > div > article > div:nth-child(42) > div > ul > li:nth-child(3)"))
+    famous1=(rvest::html_text(rvest::html_node(x=url,css="#main > div > div > div > article > div:nth-child(45) > div > ul > li:nth-child(1)")))
+    famous2=rvest::html_text(rvest::html_node(x=url,css = "#main > div > div > div > article > div:nth-child(45) > div > ul > li:nth-child(2)"))
+    famous3=rvest::html_text(rvest::html_node(x=url,css = "#main > div > div > div > article > div:nth-child(45) > div > ul > li:nth-child(3)"))
     famous=data.frame("Famous1"=famous1,"Famous2"=famous2,"Famous3"=famous3)
   }
   

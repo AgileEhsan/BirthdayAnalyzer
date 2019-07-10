@@ -12,8 +12,8 @@
 
 FNfoes=function(url){
   url=xml2::read_html(url)
-  foe1=(rvest::html_text(rvest::html_node(x=url,css="#main > div > div > div > article > div:nth-child(6) > div > ul > ul.bullet-red > li:nth-child(1) > a")))
-  foe2=rvest::html_text(rvest::html_node(x=url,css = "#main > div > div > div > article > div:nth-child(6) > div > ul > ul.bullet-red > li:nth-child(2) > a"))
+  foe1=(rvest::html_text(rvest::html_node(x=url,css="#main > div > div > div > article > div:nth-child(7) > div > ul > ul.bullet-red > li:nth-child(1) > a")))
+  foe2=rvest::html_text(rvest::html_node(x=url,css = "#main > div > div > div > article > div:nth-child(7) > div > ul > ul.bullet-red > li:nth-child(2) > a"))
   foe=data.frame("Foe1"=foe1,"Foe2"=foe2)
   foe
 }
